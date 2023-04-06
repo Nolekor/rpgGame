@@ -9,11 +9,11 @@ export function Character(data) {
 
   this.maxHealth = this.health;
 
-  this.diceArray = getDicePlaceholderHtml(this.diceCount);
+  this.diceArrayHtml = getDicePlaceholderHtml(this.diceCount);
 
-  this.getDiceHtml = function () {
+  this.setDiceHtml = function () {
     this.currentDiceScore = getDiceRollArray(this.diceCount);
-    this.diceArray = this.currentDiceScore
+    this.diceArrayHtml = this.currentDiceScore
       .map((roll) => `<div class="dice">${roll}</div>`)
       .join("");
   };
@@ -39,14 +39,14 @@ export function Character(data) {
   };
 
   this.getCharacterHtml = function () {
-    const { elementId, name, avatar, health, diceCount, diceArray } = this;
+    const { elementId, name, avatar, health, diceCount, diceArrayHtml } = this;
     const healthBar = this.getHealthBarHtml();
     return `<div class="character-card">
           <h4 class="name">${name}</h4>
           <img class="avatar" src="${avatar}"/>
           <p class="health">health: <b>${health}</b></p>
           ${healthBar}
-          <div class="dice-container">${diceArray}</div>
+          <div class="dice-container">${diceArrayHtml}</div>
        </div>  `;
   };
 }
