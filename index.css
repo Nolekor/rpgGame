@@ -143,7 +143,7 @@ main {
 
 @media (min-width: 550px) {
   .dice-container {
-    height: 30%;
+    height: 25%;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
@@ -167,8 +167,6 @@ main {
     height: 10vh;
     width: 10vh;
     line-height: 10.5vh;
-    max-width: 100px;
-    max-height: 100px;
   }
 }
 

@@ -7,6 +7,24 @@ function attack() {
   wizard.takeDamage(orc.currentDiceScore);
   orc.takeDamage(wizard.currentDiceScore);
   render();
+  if (wizard.isDead || orc.isDead) {
+    gameOver();
+  }
+}
+
+function gameOver() {
+  const endMessage =
+    wizard.isDead && orc.isDead
+      ? "all creature dead no victory"
+      : orc.isDead
+      ? "The Wizard Wins"
+      : "The Orc is Victorious";
+  const endEmoji = wizard.health > 0 ? "🔮" : "☠️";
+  document.body.innerHTML = `<div class="end-game">
+  <h2>Game Over</h2>
+  <h3>${endMessage}</h3>
+  <p class="end-emoji">${endEmoji}</p>
+</div>`;
 }
 
 function render() {

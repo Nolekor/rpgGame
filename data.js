@@ -5,12 +5,14 @@ export const characterData = {
     health: 60,
     diceCount: 3,
     currentDiceScore: [],
+    isDead: false,
   },
   monster: {
     name: "Orc",
     avatar: "images/orc.png",
-    health: 30,
+    health: 10,
     diceCount: 1,
     currentDiceScore: [],
+    isDead: false,
   },
 };

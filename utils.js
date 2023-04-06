@@ -9,3 +9,5 @@ export function getDicePlaceholderHtml(diceCount) {
     .map(() => `<div class="placeholder-dice"></div>`)
     .join("");
 }
+export const getPercentage = (remainHealth, maxHealth) =>
+  (100 * remainHealth) / maxHealth;
