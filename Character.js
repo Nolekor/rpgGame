@@ -34,7 +34,7 @@ export function Character(data) {
     this.health -= totalAttackScore;
     if (this.health <= 0) {
       this.health = 0;
-      this.isDead = true;
+      this.dead = true;
     }
   };
 
