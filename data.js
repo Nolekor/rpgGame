@@ -4,11 +4,13 @@ export const characterData = {
     avatar: "/images/wizard.png",
     health: 60,
     diceCount: 3,
+    currentDiceScore: [],
   },
   monster: {
     name: "Orc",
     avatar: "images/orc.png",
-    health: 10,
+    health: 30,
     diceCount: 1,
+    currentDiceScore: [],
   },
 };
